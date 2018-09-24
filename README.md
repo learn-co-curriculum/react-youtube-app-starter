@@ -15,21 +15,22 @@ To get the video to render be sure to set up the embedUrl along the lines of:
 const embedUrl = `https://www.youtube.com/embed/${videoId}`;
 
 // in the JSX
-<iframe src={embedUrl} />
+<iframe src={embedUrl} />;
 ```
+
 #### Build out static app before adding api communication
 
 There is an example API response in YoutubeContainer.js
 
-When building app with students, try to follow something along the lines of the steps described in *Fullstack React* for building any React application
+When building app with students, try to follow something along the lines of the steps described in _Fullstack React_ for building any React application
 
-1. Break the app into components
-2. Build a static version of the app
-3. Determine what should be stateful
-4. Determine in which component each piece of state should live
-5. Hard-code initial states
-6. Add inverse data flow
-7. Add server communication
+1.  Break the app into components
+2.  Build a static version of the app
+3.  Determine what should be stateful
+4.  Determine in which component each piece of state should live
+5.  Hard-code initial states
+6.  Add inverse data flow
+7.  Add server communication
 
 i.e. add some static initial state and only add in fetch request after
 
@@ -43,8 +44,13 @@ The code inside mine is:
 export default {
   API_KEY: `<API Key here>`
 };
-
 ```
+
+#### request url
+
+The URL for the fetch request should be formatted as follows, replacing `<api_key>` and `<search_term>` with your API_KEY and your searchTerm!
+
+`https://www.googleapis.com/youtube/v3/search?part=snippet&key=<api_key>&q=<searchTerm>&type=video`
 
 #### lodash debounce
 
