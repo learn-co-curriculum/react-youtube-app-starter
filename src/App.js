@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import YouTubeContainer from "./YoutubeContainer";
 
 class App extends Component {
   render() {
-    return <div>App component</div>;
+    return (
+      <div>
+        <YouTubeContainer />
+      </div>
+    );
   }
 }
 
